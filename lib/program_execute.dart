@@ -1,3 +1,5 @@
+// ignore_for_file: unused_local_variable, avoid_print
+
 import 'dart:io';
 
 void main() {
@@ -20,5 +22,26 @@ void main() {
   List<int> tableSeven = [7, 14, 21, 28, 35, 42, 49, 56, 63, 70];
   List<int> numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-  String? js = stdin.readLineSync();
+  // String correctPassword = 'JawanTech321';
+  // String? js = stdin.readLineSync();
+  // if (js == correctPassword) {
+  //   print("Both Password are Same");
+  // } else {
+  //   print("Incorrect password");
+  // }
+  List<String> studentName = ['Abdul Sattar', 'Faraz', 'Qasim'];
+  List<double> studentScore = [300, 400, 450];
+  int totalScore = 500;
+  for (var i = 0; i < studentName.length; i++) {
+    print('${studentName[i]} = ${studentScore[i]}');
+  }
+  double student1 = (studentScore[0] / 500) * 100;
+  double student2 = (studentScore[1] / 500) * 100;
+  double student3 = (studentScore[2] / 500) * 100;
+  print('${studentName[0]} Percentage is $student1');
+  print('${studentName[1]} Percentage is $student2');
+  print('${studentName[2]} Percentage is $student3');
+  String myword = 'Hyderabad';
+  String replaceText = myword.replaceAll('Hyder', 'islam');
+  print(replaceText);
 }

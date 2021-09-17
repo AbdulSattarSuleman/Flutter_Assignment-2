@@ -134,3 +134,44 @@ const question8 = '''
 a. Store correct password in a JS variable.
 b. Asks user to enter his/her password 
 ''';
+const question9 = '''
+(9) Write a program to store 3 student names in an array. Take another array to
+store score of these three students. Assume that total marks are 500 for each
+student, display the scores & percentages of students. 
+''';
+
+const question10 = '''
+(10) Declare 5 legal & 5 illegal variable names.
+''';
+
+const legalVariable = '''
+1. studentName
+2. student
+3. studentname
+4. student1
+5. student£
+''';
+
+const illegalVaiable = '''
+1. 1Studentname
+2. .studentname
+3. student-name
+4. studentname-
+5. 0studentname-
+''';
+
+const question11 = '''
+(11) Write a program to replace the “Hyder” to “Islam” in the word
+“Hyderabad” and display the result.
+''';
+
+const answer11 = '''
+String myword = 'Hyderabad';
+String replaceText = myword.replaceAll('Hyder', 'islam');
+print(replaceText);
+''';
+
+const question12 = '''
+Write a program to generate your K-Electric bill 7. All the amounts should
+be rounded off to 2 decimal places. Display the following fields: 
+''';

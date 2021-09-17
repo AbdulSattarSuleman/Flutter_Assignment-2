@@ -7,6 +7,9 @@ import 'package:flutter_ass_2/views/opeartors.dart';
 import 'package:flutter_ass_2/views/page_3.dart';
 import 'package:flutter_ass_2/views/page_4.dart';
 import 'package:flutter_ass_2/views/page_5.dart';
+import 'package:flutter_ass_2/views/page_6.dart';
+import 'package:flutter_ass_2/views/page_7.dart';
+import 'package:flutter_ass_2/views/page_8.dart';
 import 'package:flutter_ass_2/views/questions_2.dart';
 
 class HomeView extends StatelessWidget {
@@ -25,6 +28,9 @@ class HomeView extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              const SizedBox(
+                height: 20,
+              ),
               Text(question1, style: normalHeadingStyle),
               RichText(
                 text: const TextSpan(
@@ -98,6 +104,9 @@ class HomeView extends StatelessWidget {
               Page3(),
               Page4(),
               Page5(),
+              Page6(),
+              Page7(),
+              Page8(),
             ],
           ),
         ),

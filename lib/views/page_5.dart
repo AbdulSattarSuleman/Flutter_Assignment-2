@@ -46,10 +46,24 @@ class _Page5State extends State<Page5> {
             },
             child: const Text('Validate Password')),
         if (validatePassword == true)
-          Text('Correct Password')
+          Text(
+            'Correct! The password you',
+            style: normalText,
+          )
         else
-          Text('Wrong Password'),
-        Text('Check Text'),
+          Text(
+            'Incorrect password',
+            style: normalText,
+          ),
+        Divider(),
+        Text(
+          inputPassword.text,
+          style: normalText,
+        ),
+        Text(
+          'Correct Password = $correctPassword ',
+          style: normalText,
+        ),
       ],
     );
   }
