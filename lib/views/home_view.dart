@@ -2,6 +2,12 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_ass_2/constant.dart';
+import 'package:flutter_ass_2/question_constant.dart';
+import 'package:flutter_ass_2/views/opeartors.dart';
+import 'package:flutter_ass_2/views/page_3.dart';
+import 'package:flutter_ass_2/views/page_4.dart';
+import 'package:flutter_ass_2/views/page_5.dart';
+import 'package:flutter_ass_2/views/questions_2.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({Key? key}) : super(key: key);
@@ -19,6 +25,7 @@ class HomeView extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              Text(question1, style: normalHeadingStyle),
               RichText(
                 text: const TextSpan(
                     text: 'Operators in',
@@ -85,98 +92,12 @@ class HomeView extends StatelessWidget {
               SizedBox(
                 height: 20,
               ),
-              Text(
-                '1. Arithmetic Operators:',
-                style: normalHeadingStyle,
-              ),
-              Text(
-                arithmetic,
-                softWrap: false,
-                style: normalText,
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              Text(
-                'Example',
-                style: normalHeadingStyle,
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              Text(
-                arithmeticExample,
-                style: normalText,
-              ),
-              Text(
-                '2. Relational Operators:',
-                style: normalHeadingStyle,
-              ),
-              Text(
-                relational,
-                softWrap: false,
-                style: normalText,
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              Text(
-                'Example',
-                style: normalHeadingStyle,
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              Text(
-                relationalExample,
-                style: normalText,
-              ),
-              Text(
-                '3. Type Test Operators:',
-                style: normalHeadingStyle,
-              ),
-              Text(
-                typeTest,
-                softWrap: false,
-                style: normalText,
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              Text(
-                'Example',
-                style: normalHeadingStyle,
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              Text(
-                typeTestExample,
-                style: normalText,
-              ),
-              Text(
-                '4. Bitwise Operators:',
-                style: normalHeadingStyle,
-              ),
-              Text(
-                bitwiseOperator,
-                softWrap: false,
-                style: normalText,
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              Text(
-                'Example',
-                style: normalHeadingStyle,
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              Text(
-                bitwiseExample,
-                style: normalText,
-              ),
+              Operators(),
+              Question2(),
+              Question3(),
+              Page3(),
+              Page4(),
+              Page5(),
             ],
           ),
         ),

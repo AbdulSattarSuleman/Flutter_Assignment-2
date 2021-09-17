@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+const Color htextColor = Colors.deepPurple;
+
 const TextStyle bigHeadingStyle =
     TextStyle(fontSize: 32, fontWeight: FontWeight.bold, letterSpacing: 1.3);
 
@@ -13,6 +15,7 @@ const TextStyle normalHeadingStyle = TextStyle(
 const TextStyle normalText = TextStyle(
   fontSize: 19,
 );
+
 const operatorsDefinition = '''   
     The operators are special symbols that are used to carry out certain 
     operations on the operands. The Dart has numerous built-in operators 
@@ -182,4 +185,137 @@ void main()
 640
 0 
 ''';
-const Color htextColor = Colors.deepPurple;
+
+const assignmentOperator = '''
+These class of operators contain those operators which are used to 
+assign value to the operands. It goes like this: 
+''';
+
+const assignmentExample = '''
+void main()
+{
+    int a = 5;
+    int b = 7;
+ 
+    // Assigning value to variable c
+    var c = a * b;
+    print(c);
+ 
+    // Assigning value to variable d
+    var d;
+    d ? ? = a + b; // Value is assign as it is null
+    print(d);
+    // Again trying to assign value to d
+    d ? ? = a - b; // Value is not assign as it is not null
+    print(d);
+}
+/* Output */
+35
+12
+12
+''';
+const logicalOperator = '''
+These class of operators contain those operators which are used to 
+logically combine two or more conditions of the operands. It goes like
+this: 
+''';
+
+const logicalExample = '''
+void main()
+{
+    int a = 5;
+    int b = 7;
+ 
+    // Using And Operator
+    bool c = a > 10 && b < 10;
+    print(c); 
+ 
+    // Using Or Operator
+    bool d = a > 10 || b < 10;
+    print(d); 
+ 
+    // Using Not Operator
+    bool e = !(a > 10);
+    print(e); 
+
+}
+
+/* Output */
+false
+true
+true
+''';
+
+const conditionalOperator = '''
+These class of operators contain those operators which are used to 
+perform comparison on the operands. It goes like this:
+''';
+
+const conditionalExample = '''
+void main()
+{
+    int a = 5;
+    int b = 7;
+ 
+    // Conditional Statement
+    var c = (a < 10) ? "Statement is Correct, Geek" : "Statement is Wrong, Geek";
+    print(c);
+ 
+    // Conditional statement
+    int n;
+    var d = n ? ? "n has Null value";
+    print(d);
+ 
+    // After assigning value to n
+    n = 10;
+    d = n ? ? "n has Null value";
+    print(d);
+}
+/* Output */
+Statement is Correct, Geek
+n has Null value
+10 
+''';
+
+const cascadeOperator = '''
+These class of operators allows you to perform a sequence of 
+operation on the same element. It allows you to perform multiple 
+methods on the same object. It goes like this:
+''';
+
+const cascadeExample = '''
+class GFG {
+    var a;
+    var b;
+ 
+    void set(x, y)
+    {
+        this.a = x;
+        this.b = y;
+    }
+ 
+    void add()
+    {
+        var z = this.a + this.b;
+        print(z);
+    }
+}
+ 
+void main()
+{
+    // Creating objects of class GFG
+    GFG geek1 = new GFG();
+    GFG geek2 = new GFG();
+ 
+    // Without using Cascade Notation
+    geek1.set(1, 2);
+    geek1.add();
+ 
+    // Using Cascade Notation
+    geek2..set(3, 4)
+        ..add();
+}
+/* Output */
+3
+7
+''';
