@@ -10,6 +10,7 @@ import 'package:flutter_ass_2/views/page_5.dart';
 import 'package:flutter_ass_2/views/page_6.dart';
 import 'package:flutter_ass_2/views/page_7.dart';
 import 'package:flutter_ass_2/views/page_8.dart';
+import 'package:flutter_ass_2/views/page_9.dart';
 import 'package:flutter_ass_2/views/questions_2.dart';
 
 class HomeView extends StatelessWidget {
@@ -24,13 +25,10 @@ class HomeView extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.only(left: 50.0),
+          padding: const EdgeInsets.fromLTRB(30, 60, 0, 0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const SizedBox(
-                height: 20,
-              ),
               Text(question1, style: normalHeadingStyle),
               RichText(
                 text: const TextSpan(
@@ -99,14 +97,42 @@ class HomeView extends StatelessWidget {
                 height: 20,
               ),
               Operators(),
+              Divider(
+                color: htextColor,
+              ),
               Question2(),
+              Divider(
+                color: htextColor,
+              ),
               Question3(),
+              Divider(
+                color: htextColor,
+              ),
               Page3(),
+              Divider(
+                color: htextColor,
+              ),
               Page4(),
+              Divider(
+                color: htextColor,
+              ),
               Page5(),
+              Divider(
+                color: htextColor,
+              ),
               Page6(),
+              Divider(
+                color: htextColor,
+              ),
               Page7(),
+              Divider(
+                color: htextColor,
+              ),
               Page8(),
+              Divider(
+                color: htextColor,
+              ),
+              Page9(),
             ],
           ),
         ),

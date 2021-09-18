@@ -172,6 +172,12 @@ print(replaceText);
 ''';
 
 const question12 = '''
-Write a program to generate your K-Electric bill 7. All the amounts should
+(12) Write a program to generate your K-Electric bill 7. All the amounts should
 be rounded off to 2 decimal places. Display the following fields: 
+''';
+
+const question13 = '''
+(13) Write a program that shows the message “First fifteen days of the month”
+if the date is less than 16th of the month else shows “Last days of the
+month”. 
 ''';

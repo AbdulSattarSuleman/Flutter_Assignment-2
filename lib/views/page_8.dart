@@ -1,22 +1,27 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, unrelated_type_equality_checks
 
 import 'dart:core';
 import 'package:flutter/material.dart';
 import 'package:flutter_ass_2/constant.dart';
 import 'package:flutter_ass_2/question_constant.dart';
+import 'package:intl/intl.dart';
+
+DateTime now = DateTime.now();
+DateTime getMonth = DateTime.parse(now.toString());
+int currentMonthNumber = getMonth.month;
+String customerName = 'Andul Sattar';
+double numberUnits = 30;
+double chargesUnit = 5;
+String currentMonth = currentMonthNumber.toString();
+double latePayment = numberUnits * 0.2;
+double amountPayable = (numberUnits * chargesUnit);
+double grossPayable = amountPayable + latePayment;
 
 class Page8 extends StatelessWidget {
-  String customerName = 'Andul Sattar';
-  String currentMonth = 'September';
-  double numberUnits = 30;
-  double chargesUnit = 5;
-
   @override
   Widget build(BuildContext context) {
-    double latePayment = numberUnits * 0.2;
-    double amountPayable = (numberUnits * chargesUnit);
-    double grossPayable = amountPayable + latePayment;
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       // ignore: prefer_const_literals_to_create_immutables
       children: [
         const Text(
@@ -44,10 +49,13 @@ class Page8 extends StatelessWidget {
               'Current Month',
               style: normalHeadingStyle,
             ),
-            Text(
-              currentMonth,
-              style: normalText,
-            ),
+            if (currentMonthNumber == 9)
+              Text(
+                'September',
+                style: normalText,
+              )
+            else
+              Text('This is not September')
           ],
         ),
         Row(
@@ -63,15 +71,12 @@ class Page8 extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            Expanded(
-              child: const Text(
-                'Net Amount Payable Within Due Date',
-                maxLines: 2,
-                style: normalHeadingStyle,
-              ),
+            const Text(
+              'Late Payment Surcharge',
+              style: normalHeadingStyle,
             ),
             Text(
-              amountPayable.toString(),
+              latePayment.toString(),
               style: normalText,
             ),
           ],
@@ -80,11 +85,12 @@ class Page8 extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             const Text(
-              'Late Payment Surcharge',
+              'Net Amount Payable Within Due Date',
+              maxLines: 2,
               style: normalHeadingStyle,
             ),
             Text(
-              latePayment.toString(),
+              amountPayable.toString(),
               style: normalText,
             ),
           ],
