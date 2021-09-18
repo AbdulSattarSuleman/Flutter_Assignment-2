@@ -1,16 +1,20 @@
 # flutter_ass_2
 
-A new Flutter project.
+Flutter Assignment 2
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+#### Following Are the Widgets Used in this Project
 
-A few resources to get you started if this is your first Flutter project:
+1) Text Widget
+2) Rich Text
+3) Divider
+4) TextFormField
+5) Validate Password Using Equality Operator
+6) MultiLine Text String
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+## Thats it!
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+
+
